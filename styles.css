@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('HD.jpg'); /* Adjust the path relative to your CSS file */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #333; /* Dark gray text for contrast */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*/ Keyframe for background animation */
+@keyframes backgroundFade {
+    10% {
+        background: url('C:\xampp\htdocs\Registration Form\HD.jpg');
+    }
+    100% {
+        background: url('C:\xampp\htdocs\Registration Form\HD.jpg');
+    }
+}
+
+/* Form container styling */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #190a8f;/* Path to your form background image */
+    background-size: cover; /* Ensure the image covers the form */
+    background-position: center; /* Center the image within the form */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ffdfdf; /* Light pastel pink border */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px); /* Optional: Add a blur effect to the background */
+    color: #fff; /* Adjust text color for readability */
+}
+
+/* Hover effect for the container */
+.container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Heading styling */
+h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #ff7f7f; /* Pastel pink heading */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #f06292; /* Slightly darker pink on hover */
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 500;
+    color: #f5f0f0; /* Light gray text */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Light border for inputs */
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #e3d2de; /* Light pastel background */
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input hover and focus effect */
+input:hover, select:hover, textarea:hover {
+    background-color: #b8acf0; /* Light pastel hover effect */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #271f1f; /* Pastel pink border on focus */
+    box-shadow: 0 0 5px rgba(255, 127, 127, 0.5);
+    outline: none;
+}
+
+/* Submit button styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(45deg, #ff7f7f, #f8b6d9); /* Soft gradient */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover and active effect */
+button:hover {
+    background: linear-gradient(45deg, #ff4f4f, #f29fc7); /* Darker gradient on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    background: linear-gradient(45deg, #ff7f7f, #f8b6d9);
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Back button styling */
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: none;
+    color: #ff7f7f; /* Pastel pink back button */
+    text-decoration: none;
+    border: 1px solid #ff7f7f;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Hover effect for the back button */
+.back-btn:hover {
+    background-color: rgba(170, 157, 157, 0.1);
+}
+
+/* Styling for success message after submit */
+.success-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #e1f7e7; /* Soft pastel green */
+    border: 2px solid #8ccf8c;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4caf50;
+    text-align: center;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Show success message */
+.success-msg.show {
+    display: block;
+    opacity: 1;
+}
